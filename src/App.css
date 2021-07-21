@@ -5,16 +5,47 @@ html{
   box-sizing: border-box;
 }
 
-*,*:before, *:after {
+*,
+*:before,
+ *:after {
   box-sizing: inherit;
 }
 
 body{
-  background-image: url('https://www.stratoscale.com/wp-content/uploads/bigstock-168398480-1920x960.jpg');
+  background-image: url('https://source.unsplash.com/1600x900/?landscape');
   background-blend-mode: overlay;
-  background-color: #000000cc;
+  background-color: #00000056;
   margin: 0 auto;
   text-align: center;
+  animation: fadeIn 0.5s;
+  -webkit-animation: fadeIn 0.5s;
+  -moz-animation: fadeIn 0.5s;
+  -o-animation: fadeIn 0.5s;
+  -ms-animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
 
 body ::-webkit-scrollbar{
@@ -25,9 +56,11 @@ body ::-webkit-scrollbar{
   margin: 0 auto;
   text-align: center;
   width: 60%;
-  height: 400px;
+  height: fit-content;
   margin: 20px auto;
   padding: 2%;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.322);
 }
 
 .app-info{
@@ -69,7 +102,6 @@ form input{
 }
 
 form button {
-  /* border-radius: 100px; */
   outline: none;
   background: transparent;
   width: 30px;
@@ -79,6 +111,7 @@ form button {
   border: none;
   box-shadow: 2px 2px #87ceeb;
   color: #fff;
+  transition: 0.2s ease-in-out;
 }
 
 form button:active{
