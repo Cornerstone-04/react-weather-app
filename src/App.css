@@ -1,5 +1,6 @@
 @import "http://fonts.fontstorage.com/import/poppins.css";
 @import "http://fonts.fontstorage.com/import/nunito.css";
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
 
 html{
   box-sizing: border-box;
@@ -13,40 +14,21 @@ html{
 
 body{
   background-image: url('https://source.unsplash.com/1600x900/?landscape');
+  max-height: 100vh;
+  max-width: 100vw;
   background-blend-mode: overlay;
   background-color: #00000056;
   margin: 0 auto;
   text-align: center;
   animation: fadeIn 0.5s;
-  -webkit-animation: fadeIn 0.5s;
-  -moz-animation: fadeIn 0.5s;
-  -o-animation: fadeIn 0.5s;
-  -ms-animation: fadeIn 0.5s;
+  
 }
 
 @keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
 }
-@-moz-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
 
-@-webkit-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-@-o-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-@-ms-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
 
 body ::-webkit-scrollbar{
   display: none;
@@ -72,7 +54,7 @@ body ::-webkit-scrollbar{
 }
 
 .header h1{
-  font-size: 40px;
+  font-size: 200%;
   color: #fff;
   font-family: 'Yatra One',cursive;
 }
@@ -97,6 +79,7 @@ form input{
   padding: 10px 2px;
   background: transparent;
   border: none;
+  border-radius: none;
   border-bottom: 2px solid #87ceeb;
   outline: none;
 }
@@ -141,5 +124,4 @@ form button:active{
   margin-top: 2px;
   margin-left: 4px;
 }
-
 

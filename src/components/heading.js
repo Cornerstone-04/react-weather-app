@@ -1,13 +1,10 @@
 import React from "react";
 import '../App.css'
-import ReactLogo from '../logo.svg'
 
 const heading = () => {
   return (
     <div className="header">
       <div className="app-info">
-        <img src={ReactLogo} alt="weatherly logo"/>
-        
         <h1>
           Weatherly&trade;
         </h1>
