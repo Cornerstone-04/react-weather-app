@@ -31,7 +31,7 @@ const Forecast = (props) => {
         {props.speed && <p>Wind Speed: {props.speed} km/h </p> }
       </div>
       {props.description && <p>Conditions:{props.description}</p>}
-      {props.error && <p>{props.error}</p>}
+      {props.error && <p className="error">{props.error}</p>}
     </div>
   
   );

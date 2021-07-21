@@ -7,8 +7,8 @@ const form = (props) => {
   return (
     <div>
       <form onSubmit={props.loadWeather}>
-        <input type="text" name="city" placeholder="Choose a City..." />
-        <input type="text" name="country" placeholder="Choose a Country..." />
+        <input type="text" name="city" placeholder="City..." />
+        <input type="text" name="country" placeholder="Country..." />
         <button>
           <FontAwesomeIcon icon={faSearch} />
         </button>

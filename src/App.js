@@ -46,7 +46,7 @@ class App extends Component {
         document.body.style.color = '#f4f4f4';
     } else {
       this.setState({
-        error: "Please fill out input fields...",
+        error: "Please fill out input fields!",
       });
     }
   };
