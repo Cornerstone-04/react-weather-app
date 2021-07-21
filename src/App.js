@@ -25,8 +25,9 @@ class App extends Component {
     const api_call = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${api_key}`
     );
-    console.log(api_call);
-    console.log(city, country);
+
+    // console.log(api_call);
+    // console.log(city, country);
 
     const response = await api_call.json();
     if (city && country) {
@@ -41,6 +42,7 @@ class App extends Component {
         descirption: response.weather[0].description,
         error: "",
       });
+      console.log(this.descirption)
       document.body.style.backgroundImage =
         "url('https://source.unsplash.com/1600x900/?" + response.name + "')";
         document.body.style.color = '#f4f4f4';
