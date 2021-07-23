@@ -4,7 +4,7 @@ import Heading from "./components/heading";
 import Form from "./components/form";
 import Forecast from "./components/forecast";
 
-const api_key = "9218e3e59d4744fa2be7916b15f7d660";
+const apiKey = "9218e3e59d4744fa2be7916b15f7d660";
 
 class App extends Component {
   state = {
@@ -14,22 +14,21 @@ class App extends Component {
     humidity: "",
     pressure: "",
     icon: "",
-    description: "",
-    error: "",
+    description: ""
   };
 
   getWeather = async (e) => {
     e.preventDefault();
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
-    const api_call = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${api_key}`
+    const apiCall = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${apiKey}`
     );
 
     // console.log(api_call);
     // console.log(city, country);
 
-    const response = await api_call.json();
+    const response = await apiCall.json();
     if (city && country) {
       this.setState({
         city: response.name,
@@ -39,18 +38,19 @@ class App extends Component {
         pressure: response.main.pressure,
         icon: response.weather[0].icon,
         speed: response.wind.speed,
-        descirption: response.weather[0].description,
-        error: "",
+        description: response.weather[0].description,
       });
-      console.log(this.descirption)
+      console.log(response)
+      // console.log(this.setState.descirption)
       document.body.style.backgroundImage =
         "url('https://source.unsplash.com/1600x900/?" + response.name + "')";
         document.body.style.color = '#f4f4f4';
-    } else {
-      this.setState({
-        error: "Please fill out input fields!",
-      });
-    }
+    } 
+    // else {
+    //   this.setState({
+    //     error: "Please fill out input fields!",
+    //   });
+    // }
   };
 
   render() {
@@ -59,7 +59,7 @@ class App extends Component {
         <div>
           <Heading />
         </div>
-        <Form loadWeather={this.getWeather} />
+        <Form loadWeather={this.getWeather} required/>
         <div className="weather">
           <Forecast
             temperature={this.state.temperature}
@@ -70,7 +70,6 @@ class App extends Component {
             speed={this.state.speed}
             icon={this.state.icon}
             description={this.state.description}
-            error={this.state.error}
           />
         </div>
       </div>

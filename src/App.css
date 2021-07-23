@@ -1,6 +1,7 @@
 @import "http://fonts.fontstorage.com/import/poppins.css";
 @import "http://fonts.fontstorage.com/import/nunito.css";
 @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 html{
   box-sizing: border-box;
@@ -21,7 +22,6 @@ body{
   margin: 0 auto;
   text-align: center;
   animation: fadeIn 0.5s;
-  
 }
 
 @keyframes fadeIn {
@@ -42,11 +42,7 @@ body ::-webkit-scrollbar{
   margin: 20px auto;
   padding: 2%;
   border-radius: 20px;
-  background: rgba(0, 0, 0, 0.322);
-}
-
-.app-info{
-  display: inline-flex;
+  background: #00000052;
 }
 
 .header{
@@ -56,13 +52,12 @@ body ::-webkit-scrollbar{
 .header h1{
   font-size: 200%;
   color: #fff;
-  font-family: 'Yatra One',cursive;
-  text-transform: uppercase;
+  font-family: 'Yatra One', cursive;
+  /* text-transform: uppercase; */
 }
 
 .header h2{
   font-family: 'Nunito';
-
 }
 
 form{
@@ -86,6 +81,17 @@ form input{
   outline: none;
 }
 
+form input:focus{
+  transition: 0.5s ease-in-out;
+  border-bottom: 2px solid #f87a64;
+}
+
+input::placeholder{
+  color:#d4d3d3;
+  font-weight: lighter;
+  text-transform: lowercase;
+}
+
 form button {
   outline: none;
   background: transparent;
@@ -96,12 +102,14 @@ form button {
   border: none;
   box-shadow: 2px 2px #87ceeb;
   color: #fff;
-  transition: 0.2s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
+
 
 form button:active{
   box-shadow: none;
   transform: translateY(4px);
+  background-color: #f87a644f;
 }
 
 .weather{
@@ -109,12 +117,7 @@ form button:active{
   text-align: center;
   color: #fff;
   font-weight: bolder;
-  font-family: 'Poppins';
-}
-
-.app-info img{
-  width: 10px;
-  display: contents;
+  font-family: 'Nunito';
 }
 
 .temp {
@@ -127,7 +130,6 @@ form button:active{
   margin-left: 4px;
 }
 
-.error{
-  font-size: medium;
-  font-family: 'Nunito';
+.condition{
+  text-transform: capitalize;
 }
