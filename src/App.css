@@ -57,6 +57,7 @@ body ::-webkit-scrollbar{
   font-size: 200%;
   color: #fff;
   font-family: 'Yatra One',cursive;
+  text-transform: uppercase;
 }
 
 .header h2{
