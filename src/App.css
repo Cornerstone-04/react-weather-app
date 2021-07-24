@@ -21,6 +21,9 @@ body{
   background-color: #00000060;
   margin: 0 auto;
   text-align: center;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
   animation: fadeIn 0.5s;
 }
 
@@ -53,7 +56,6 @@ body ::-webkit-scrollbar{
   font-size: 200%;
   color: #fff;
   font-family: 'Yatra One', cursive;
-  /* text-transform: uppercase; */
 }
 
 .header h2{
@@ -116,7 +118,7 @@ form button:active{
   margin: 0 auto;
   text-align: center;
   color: #fff;
-  font-weight: bolder;
+  font-weight: normal;
   font-family: 'Nunito';
 }
 

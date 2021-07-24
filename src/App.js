@@ -14,7 +14,7 @@ class App extends Component {
     humidity: "",
     pressure: "",
     icon: "",
-    description: ""
+    description: "",
   };
 
   getWeather = async (e) => {
@@ -24,9 +24,6 @@ class App extends Component {
     const apiCall = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${apiKey}`
     );
-
-    // console.log(api_call);
-    // console.log(city, country);
 
     const response = await apiCall.json();
     if (city && country) {
@@ -40,17 +37,10 @@ class App extends Component {
         speed: response.wind.speed,
         description: response.weather[0].description,
       });
-      console.log(response)
-      // console.log(this.setState.descirption)
       document.body.style.backgroundImage =
         "url('https://source.unsplash.com/1600x900/?" + response.name + "')";
-        document.body.style.color = '#f4f4f4';
-    } 
-    // else {
-    //   this.setState({
-    //     error: "Please fill out input fields!",
-    //   });
-    // }
+      document.body.style.color = "#f4f4f4";
+    }
   };
 
   render() {
@@ -59,7 +49,7 @@ class App extends Component {
         <div>
           <Heading />
         </div>
-        <Form loadWeather={this.getWeather} required/>
+        <Form loadWeather={this.getWeather} required />
         <div className="weather">
           <Forecast
             temperature={this.state.temperature}

@@ -6,9 +6,9 @@ const Forecast = (props) => {
     <div className="weather">
         <div className="location">
           {props.country && props.city && (
-            <p>
-              Location: {props.city}, {props.country}.
-            </p>
+            <h3>
+              Weather in {props.city}, {props.country}.
+            </h3>
           )}
         </div>
         {props.temperature && (
