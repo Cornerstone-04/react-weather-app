@@ -1,7 +1,5 @@
-@import "http://fonts.fontstorage.com/import/poppins.css";
 @import "http://fonts.fontstorage.com/import/nunito.css";
 @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 html{
   box-sizing: border-box;
@@ -21,20 +19,6 @@ body{
   background-color: #00000060;
   margin: 0 auto;
   text-align: center;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  animation: fadeIn 0.5s;
-}
-
-@keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-
-body ::-webkit-scrollbar{
-  display: none;
 }
 
 .App {
@@ -74,18 +58,13 @@ form input{
   font-size: medium;
   text-align: left;
   width: 50%;
-  margin: 0 20px;
+  margin: 0 2%;
   padding: 10px 2px;
   background: transparent;
   border: none;
   border-radius: none;
   border-bottom: 2px solid #87ceeb;
   outline: none;
-}
-
-form input:focus{
-  transition: 0.5s ease-in-out;
-  border-bottom: 2px solid #f87a64;
 }
 
 input::placeholder{
@@ -107,13 +86,6 @@ form button {
   transition: 0.1s ease-in-out;
 }
 
-
-form button:active{
-  box-shadow: none;
-  transform: translateY(4px);
-  background-color: #f87a644f;
-}
-
 .weather{
   margin: 0 auto;
   text-align: center;
@@ -124,14 +96,6 @@ form button:active{
 
 .temp {
   margin: 0 auto;
-  display: inline-flex;
+  display: flex;
 }
 
-.temp p:nth-child(2){
-  margin-top: 2px;
-  margin-left: 4px;
-}
-
-.condition{
-  text-transform: capitalize;
-}
