@@ -14,6 +14,7 @@ class App extends Component {
     humidity: "",
     pressure: "",
     icon: "",
+    speed: "",
     description: "",
   };
 
