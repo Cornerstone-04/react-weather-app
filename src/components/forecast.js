@@ -29,7 +29,7 @@ const Forecast = (props) => {
       <br />
       <div className="units">
         {props.humidity && <span>Humidity: {props.humidity}%</span>}
-        {props.pressure && <span>Pressure: {props.pressure} mmHg</span>}
+        {props.pressure && <span>Pressure: {props.pressure} hPa</span>}
         {props.speed && <span>Wind Speed: {props.speed} km/h</span>}
       </div>
     </div>
