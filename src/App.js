@@ -11,8 +11,6 @@ class App extends Component {
     temperature: "",
     city: "",
     country: "",
-    humidity: "",
-    pressure: "",
     icon: "",
     speed: "",
     description: "",
@@ -32,11 +30,8 @@ class App extends Component {
         city: response.name,
         country: response.sys.country,
         temperature: response.main.temp,
-        humidity: response.main.humidity,
-        pressure: response.main.pressure,
         icon: response.weather[0].icon,
-        speed: response.wind.speed,
-        description: response.weather[0].description,
+        description: response.weather[0].description
       });
       document.body.style.backgroundImage =
         "url('https://source.unsplash.com/1600x900/?" + response.name + "')";
@@ -56,9 +51,6 @@ class App extends Component {
             temperature={this.state.temperature}
             city={this.state.city}
             country={this.state.country}
-            humidity={this.state.humidity}
-            pressure={this.state.pressure}
-            speed={this.state.speed}
             icon={this.state.icon}
             description={this.state.description}
           />
