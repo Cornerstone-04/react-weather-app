@@ -52,7 +52,7 @@ class App extends Component {
         <Form loadWeather={this.getWeather} required />
         <div className="weather">
           <Forecast
-            temperature={this.state.temp erature}
+            temperature={this.state.temperature}
             city={this.state.city}
             country={this.state.country}
             humidity={this.state.humidity}
