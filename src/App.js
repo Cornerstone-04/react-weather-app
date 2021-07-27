@@ -12,6 +12,8 @@ class App extends Component {
     city: "",
     country: "",
     icon: "",
+    pressure: "",
+    humidity: "",
     speed: "",
     description: "",
   };
