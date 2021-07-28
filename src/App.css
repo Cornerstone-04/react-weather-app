@@ -20,7 +20,7 @@ html{
 
 .current-info{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -29,30 +29,19 @@ html{
 }
 .date-container .time{
  font-size: 70px;
+ margin-right: 0;
 }
 
 .date-container #am-pm{
-  font-size: 30px;
-  margin-left: 20px;
+  font-size: 25px;
+  margin-left: 0;
+  left: 0;
 }
 
 .date-container .date{
   font-size: 30px;
 }
 
-.place-container{
-  text-align: end;
-}
-
-.place-container .time-zone{
-  font-size: 30px;
-  font-weight: 100;
-}
-
-.place-container .country{
-  font-size: 12px;
-  font-weight: 700;
-}
 body{
   background-image: url('https://source.unsplash.com/1600x900/?temperature');
   max-height: 100vh;

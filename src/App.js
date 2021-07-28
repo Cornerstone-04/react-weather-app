@@ -6,31 +6,51 @@ import Forecast from "./components/forecast";
 
 const apiKey = "9218e3e59d4744fa2be7916b15f7d660";
 
-const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
-
-
-const timeEl = document.getElementById('time');
-const dateEl = document.getElementById('date');
-
-
-
+const timeEl = document.getElementById("time");
+const dateEl = document.getElementById("date");
 
 setInterval(() => {
-    const time = new Date();
-    const month = time.getMonth();
-    const date = time.getDate();
-    const day = time.getDay();
-    const hour = time.getHours();
-    const hoursIn12HrFormat = hour >= 13 ? hour %12: hour
-    const minutes = time.getMinutes();
-    const ampm = hour >=12 ? 'PM' : 'AM'
-    // eslint-disable-next-line 
-    timeEl.innerHTML = (hoursIn12HrFormat < 10? '0'+hoursIn12HrFormat : hoursIn12HrFormat) + ':' + (minutes < 10? '0'+minutes: minutes)+ ' ' + `<span id="am-pm">${ampm}</span>`
+  const time = new Date();
+  const month = time.getMonth();
+  const date = time.getDate();
+  const day = time.getDay();
+  const hour = time.getHours();
+  const hoursIn12HrFormat = hour >= 13 ? hour % 12 : hour;
+  const minutes = time.getMinutes();
+  const ampm = hour >= 12 ? "PM" : "AM";
+  // eslint-disable-next-line
+  timeEl.innerHTML =
+    (hoursIn12HrFormat < 10 ? "0" + hoursIn12HrFormat : hoursIn12HrFormat) +
+    ":" +
+    (minutes < 10 ? "0" + minutes : minutes) +
+    " " +
+    `<span id="am-pm">${ampm}</span>`;
 
-    dateEl.innerHTML = days[day] + ', ' + date+ ' ' + months[month]
-
+  dateEl.innerHTML = days[day] + ", " + date + " " + months[month];
 }, 1000);
 
 class App extends Component {
@@ -42,7 +62,7 @@ class App extends Component {
     pressure: "",
     humidity: "",
     speed: "",
-    description: "",
+    description: ""
   };
 
   getWeather = async (e) => {
@@ -63,7 +83,7 @@ class App extends Component {
         pressure: response.main.pressure,
         icon: response.weather[0].icon,
         speed: response.wind.speed,
-        description: response.weather[0].description,
+        description: response.weather[0].description
       });
       console.log(response);
       document.body.style.backgroundImage =
