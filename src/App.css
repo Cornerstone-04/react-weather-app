@@ -13,6 +13,46 @@ html{
   box-sizing: inherit;
 }
 
+.container{
+  padding: 20px 70px;
+  color:#fff;
+}
+
+.current-info{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.date-container{
+  font-weight: 100;
+}
+.date-container .time{
+ font-size: 70px;
+}
+
+.date-container #am-pm{
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+.date-container .date{
+  font-size: 30px;
+}
+
+.place-container{
+  text-align: end;
+}
+
+.place-container .time-zone{
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.place-container .country{
+  font-size: 12px;
+  font-weight: 700;
+}
 body{
   background-image: url('https://source.unsplash.com/1600x900/?temperature');
   max-height: 100vh;
