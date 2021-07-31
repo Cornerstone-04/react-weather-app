@@ -84,18 +84,17 @@ class App extends Component {
         icon: response.weather[0].icon,
         speed: response.wind.speed,
         description: response.weather[0].description
-      });
+      }); 
       console.log(response);
       document.body.style.backgroundImage =
         "url('https://source.unsplash.com/1600x900/?" + response.name + "')";
-      document.body.style.color = "#f4f4f4";
     }
   };
 
   render() {
     return (
       <div className="App">
-        <div>
+        <div className="header-div">
           <Heading />
         </div>
         <Form loadWeather={this.getWeather} required />
