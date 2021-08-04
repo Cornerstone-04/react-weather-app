@@ -8,7 +8,7 @@ const form = (props) => {
     <div>
       <form onSubmit={props.loadWeather}>
         <input type="text" name="city" placeholder="City..." required />
-        <input type="text" name="country" placeholder="Country..." required/>
+        <input type="text" name="country" placeholder="Country..." required />
         <button>
           <FontAwesomeIcon icon={faSearch} />
         </button>
