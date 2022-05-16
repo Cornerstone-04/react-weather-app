@@ -6,12 +6,12 @@ const Forecast = (props) => {
     <div className="weather">
       <div className="location">
         {props.country && props.city && (
-          <h4>
+          <h3>
             Weather in {props.city}, {props.country}.
-          </h4>
+          </h3>
         )}
       </div>
-      {props.temperature && <p>Temperature: {props.temperature}&deg;C</p>}
+      {props.temperature && <p className="deg">Temperature: {props.temperature}&deg;C</p>}
 
       <div className="temp">
         {props.description.charAt(0).toUpperCase() && (

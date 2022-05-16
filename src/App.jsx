@@ -3,8 +3,8 @@ import "./App.css";
 import Heading from "./components/heading";
 import Form from "./components/form";
 import Forecast from "./components/forecast";
+import { baseURL } from "./baseURL";
 
-const apiKey = "9218e3e59d4744fa2be7916b15f7d660";
 
 const days = [
   "Sunday",
@@ -70,8 +70,8 @@ class App extends Component {
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
     const apiCall = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${apiKey}`
-    );
+      `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${baseURL}`
+    ).catch((err) =>{console.log(err)});
 
     const response = await apiCall.json();
     if (city && country) {
@@ -86,8 +86,7 @@ class App extends Component {
         description: response.weather[0].description
       }); 
       console.log(response);
-      document.body.style.backgroundImage =
-        "url('https://source.unsplash.com/1600x900/?" + response.name + "')";
+     
     }
   };
 

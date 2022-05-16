@@ -5,7 +5,7 @@ import "../App.css";
 
 const form = (props) => {
   return (
-    <div>
+    <div className="form">
       <form onSubmit={props.loadWeather}>
         <input type="text" name="city" placeholder="City..." required />
         <input type="text" name="country" placeholder="Country..." required />
