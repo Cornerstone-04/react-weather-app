@@ -71,7 +71,7 @@ class App extends Component {
     const country = e.target.elements.country.value;
     const apiCall = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${baseURL}`
-    ).catch((err) =>{console.log(err)});
+    );
 
     const response = await apiCall.json();
     if (city && country) {
@@ -85,7 +85,7 @@ class App extends Component {
         speed: response.wind.speed,
         description: response.weather[0].description
       }); 
-      console.log(response);
+      
      
     }
   };

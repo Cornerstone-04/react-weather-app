@@ -45,7 +45,7 @@ html {
 body {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(162deg, #ddddfa, #bcc3ff);
+    background: linear-gradient(162deg, #d1d1ff, #7583ff);
     text-align: center;
     display: flex;
     justify-content: center;
@@ -61,16 +61,21 @@ body ::-webkit-scrollbar {
     margin: 0 auto;
     text-align: center;
     width: 90%;
-    height: fit-content;
+    height: 100%;
     margin: 20px auto;
-    padding: 5px 10px;
+    padding: 20px 10px;
     border-radius: 20px;
     background: #00000052;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (min-width: 700px) {
     .App {
         width: 600px;
+        height: 95%;
     }
 }
 
@@ -82,10 +87,6 @@ body ::-webkit-scrollbar {
     font-size: 2rem;
     color: #fff;
     font-family: 'Lato', sans-serif;
-}
-
-.header h2 {
-    font-family: 'Nunito', sans-serif;
 }
 
 div.form {
@@ -154,7 +155,6 @@ form button:active {
     background-color: #ddddfa;
 }
 
-form button:focus,
 form button:hover {
     background-color: #ddddfa;
 }
@@ -163,8 +163,8 @@ svg.svg-inline--fa path {
     transition: .2s linear;
 }
 
-form button:focus svg.svg-inline--fa path,
-form button:hover svg.svg-inline--fa path {
+form button:hover svg.svg-inline--fa path,
+form button:active svg.svg-inline--fa path {
     filter: invert(100%);
 }
 
@@ -211,6 +211,5 @@ form button:hover svg.svg-inline--fa path {
 }
 
 .units span {
-    /* margin: 0 10px; */
     font-size: 16px;
 }

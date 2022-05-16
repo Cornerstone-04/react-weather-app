@@ -9,7 +9,6 @@ const heading = () => {
           Weatherly&trade;
         </h1>
       </div>
-      <h2>What's the weather like today?</h2>
     </div>
   );
 };
