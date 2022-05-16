@@ -6,6 +6,11 @@ html {
     box-sizing: border-box;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 *,
 *:before,
 *:after {
@@ -60,10 +65,10 @@ body ::-webkit-scrollbar {
 .App {
     margin: 0 auto;
     text-align: center;
-    width: 90%;
+    width: 95%;
     height: 100%;
     margin: 20px auto;
-    padding: 20px 10px;
+    padding: 20px 5px;
     border-radius: 20px;
     background: #00000052;
     display: flex;
@@ -76,6 +81,7 @@ body ::-webkit-scrollbar {
     .App {
         width: 600px;
         height: 95%;
+        padding: 20px 10px;
     }
 }
 
@@ -92,6 +98,7 @@ body ::-webkit-scrollbar {
 div.form {
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 form {
@@ -201,7 +208,8 @@ form button:active svg.svg-inline--fa path {
 }
 
 .deg {
-    margin: 0;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
 @media (max-width :700px) {
